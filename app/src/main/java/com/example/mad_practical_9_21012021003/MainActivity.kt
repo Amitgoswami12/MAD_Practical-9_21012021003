@@ -21,23 +21,15 @@ class MainActivity : AppCompatActivity() {
 
      override fun onWindowFocusChanged(hasFocus: Boolean) {
         if(hasFocus){
+            alarmanimation.start()
             heartanimation.start()
         }
         else{
+            alarmanimation.stop()
             heartanimation.stop()
         }
         super.onWindowFocusChanged(hasFocus)
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        if(hasFocus){
-            alarmanimation.start()
-        }
-        else
-        {
-            alarmanimation.stop()
-        }
-        super.onWindowFocusChanged(hasFocus)
-    }
 
 }

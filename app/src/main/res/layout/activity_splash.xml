@@ -7,5 +7,8 @@
     tools:context=".SplashActivity"
     android:background="@drawable/rectangle_gradient">
 
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/uvpce"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
