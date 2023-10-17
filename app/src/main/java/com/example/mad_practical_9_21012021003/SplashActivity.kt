@@ -11,7 +11,7 @@ import android.widget.ImageView
 class SplashActivity : AppCompatActivity(),Animation.AnimationListener {
     lateinit var guni_imgg:ImageView
     lateinit var logo_animation:Animation
-
+    lateinit var log_animation:AnimationDrawable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -27,12 +27,13 @@ class SplashActivity : AppCompatActivity(),Animation.AnimationListener {
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if(hasFocus){
-            logo_animation.start()
+            guni_imgg.startAnimation(logo_animation)
+            log_animation.start()
 
         }
         else
         {
-            logo_animation.stop()
+            log_animation.stop()
         }
     }
 
@@ -41,9 +42,7 @@ class SplashActivity : AppCompatActivity(),Animation.AnimationListener {
     }
 
     override fun onAnimationEnd(p0: Animation?) {
-        Intent(this,MainActivity::class.java).also { startActivity(it)}
-        overridePendingTransition(R.anim.scale_center_in,R.anim.scale_center_out)
-        finish()
+        Intent(this,MainActivity::class.java).apply { startActivity(this)}
     }
 
     override fun onAnimationRepeat(p0: Animation?) {

@@ -84,7 +84,7 @@
                             android:layout_margin="10dp"
                             app:icon="@drawable/ic_baseline_add_alarm_24"
                             app:iconSize="20sp"
-                            android:backgroundTint="@color/teal_200"/>
+                            android:backgroundTint="#80CBC4"/>
                         <com.google.android.material.button.MaterialButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -95,8 +95,8 @@
                             app:icon="@drawable/ic_baseline_alarm_off_24"
                             app:iconSize="20sp"
                             android:backgroundTint="@color/white"
-                            android:textColor="@color/teal_200"
-                            app:iconTint="@color/teal_200"/>
+                            android:textColor="#80CBC4"
+                            app:iconTint="#80CBC4"/>
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
